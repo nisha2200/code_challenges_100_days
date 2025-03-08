@@ -1,17 +1,20 @@
 package code_challenges_100_days;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 //WAP to reverse an array
 public class day_12 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[]arr = new int[n];
-        System.out.println("Enter "+n +" elements of the array:");
-        for (int i = 0; i < n; i++) {
-            n = sc.nextInt();
+        int[] arr = {3, 4, 5, 8, 6, 7};
+        int i = 0, j = arr.length - 1;
+        while (i < j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
         }
-
+        System.out.println(Arrays.toString(arr));
     }
 }
