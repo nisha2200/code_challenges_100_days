@@ -9,25 +9,29 @@ public class day_13 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of the array");
         int n = sc.nextInt();
-        int [] arr = new int[n];
-        System.out.println("Enter "+ n+" elements of the array");
+        int[] arr = new int[n];
+        System.out.println("Enter " + n + " elements of the array");
         for (int i = 0; i < n; i++) {
-            arr[i]= sc.nextInt();
+            arr[i] = sc.nextInt();
         }
-//        sorting the array
-        Arrays.sort(arr);
 //        Removing duplicates
-        int [] temp = new int[n];
+        int[] temp = new int[n];
         int j = 0;
-        for (int i = 0; i < n-1; i++) {
-            if (arr[i]!= arr[i+1]){
+        for (int i = 0; i < n; i++) {
+            boolean isDuplicate = false;
+            for (int k = 0; k < j; k++) {
+                if (arr[i] == temp[k]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if (!isDuplicate) {
                 temp[j++] = arr[i];
             }
         }
-        temp[j++]=arr[n-1]; // add the last element
-        System.out.println("Array after removing duplicates: ");
+        System.out.println("Array after removing duplicate elemnets");
         for (int i = 0; i < j; i++) {
-            System.out.println(temp[i]+ " ");
+            System.out.print(temp[i] + " ");
         }
     }
 }
