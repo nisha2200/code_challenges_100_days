@@ -11,14 +11,14 @@ public class day_29 {
         int originalNumber = number;
         int result = 0;
         int digits = String.valueOf(number).length();
-        while (number!=0){
-            int digit = number%10;
-            result+=Math.pow(digit,digits);
-            number/=10;
+        while (number != 0) {
+            int digit = number % 10;
+            result += Math.pow(digit, digits);
+            number /= 10;
         }
-        if (result == originalNumber){
+        if (result == originalNumber) {
             System.out.println(originalNumber + " is an Armstrong number: ");
-        }else {
+        } else {
             System.out.println(originalNumber + " is not an Armstrong number");
         }
     }
