@@ -15,7 +15,7 @@ public class day_55 {
 //            write.close();
             System.out.println("text written to file successfully");
         }catch (IOException e){
-            System.out.println("an error occurred while writing to the file: "+e.getMessage());
+            System.out.println(STR."an error occurred while writing to the file: \{e.getMessage()}");
         }
     }
 }
