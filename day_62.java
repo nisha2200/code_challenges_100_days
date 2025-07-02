@@ -14,16 +14,16 @@ public class day_62 {
         cities.add("patna");
         cities.add("bihar");
 //        display the linkedlist
-        System.out.println("Initial list: "+cities);
+        System.out.println("Initial list: " + cities);
 //        add element at the beginning
         cities.addFirst("Bangalore");
 //        add element at the end
         cities.addLast("pune");
-        System.out.println("after adding elements: "+cities);
+        System.out.println("after adding elements: " + cities);
 //        remove first element
         cities.removeFirst();
         cities.removeLast();
         cities.remove("mumbai");
-        System.out.println("After removing elements. "+cities);
+        System.out.println("After removing elements. " + cities);
     }
 }
